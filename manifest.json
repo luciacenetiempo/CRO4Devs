@@ -1,0 +1,80 @@
+{
+  "manifest_version": 3,
+  "name": "CRO 4 Devs",
+  "version": "1.0.2",
+  "description": "Tutto quello che ti serve sapere",
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "permissions": [
+    "scripting",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "*://marketer.monetate.net/*",
+    "*://www.arnette.com/*",
+    "*://www.contactsdirect.com/*",
+    "*://www.costadelmar.com/*",
+    "*://www.davidclulow.com/*",
+    "*://www.glasses.com/*",
+    "*://www.lenscrafters.com/*",
+    "*://www.oakley.com/*",
+    "*://www.oakleysi.com/*",
+    "*://www.opsm.com/*",
+    "*://www.oliverpeoples.com/*",
+    "*://www.persol.com/*",
+    "*://www.ray-ban.com/*",
+    "*://www.salmoiraghievigano.com/*",
+    "*://www.sunglasshut.com/*",
+    "*://www.targetoptical.com/*",
+    "*://www.vogue-eyewear.com/*"
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "markdown/*",
+        "fonts/*",
+        "images/*",
+        "debug.js"
+      ],
+      "matches": [
+        "*://*/*"
+      ]
+    }
+  ],
+  "action": {
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png"
+    },
+    "default_title": "Nome dell'estensione"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://marketer.monetate.net/*",
+        "*://www.arnette.com/*",
+        "*://www.contactsdirect.com/*",
+        "*://www.costadelmar.com/*",
+        "*://www.davidclulow.com/*",
+        "*://www.glasses.com/*",
+        "*://www.lenscrafters.com/*",
+        "*://www.oakley.com/*",
+        "*://www.oakleysi.com/*",
+        "*://www.opsm.com/*",
+        "*://www.oliverpeoples.com/*",
+        "*://www.persol.com/*",
+        "*://www.ray-ban.com/*",
+        "*://www.salmoiraghievigano.com/*",
+        "*://www.sunglasshut.com/*",
+        "*://www.targetoptical.com/*",
+        "*://www.vogue-eyewear.com/*"
+      ],
+      "js": ["markdown-it.min.js", "content_script.js"],
+      "css": ["styles.css"],
+      "run_at": "document_end"
+    }
+  ]
+}
